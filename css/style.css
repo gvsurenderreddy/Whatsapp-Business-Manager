@@ -1,0 +1,58 @@
+/** Gradient Navbar **/
+
+.navbar {
+    background: linear-gradient(90deg, rgb(56, 220, 62), rgb(106,195,236, 0.20),rgb(214,208,236, 0.10), rgba(136, 192, 114, 0.1));
+
+    width:99.99%;
+    border-radius: 0px;
+    padding-left: calc(1em + 0.25em);
+    padding-right: calc(1em + 0.25em);
+    margin-bottom: 10px;
+    -webkit-box-shadow: -7px 11px 25px -9px rgb(114,57,174);
+    -moz-box-shadow: -7px 11px 25px -9px rgb(66,26,104);
+    box-shadow: -7px 11px 25px -9px rgb(66,26,104);
+
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+}
+
+.btn {
+/** Modern material button **/
+    background: linear-gradient(90deg, rgb(56, 220, 62), rgb(62, 122, 218), rgb(44, 76, 139), rgba(42, 114, 14, 0.87));
+    border-radius: 50px;
+    border: 10px;
+    color: #ffffff;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -webkit-box-shadow: -7px 11px 25px -9px rgb(114,57,174);
+    -moz-box-shadow: -7px 11px 25px -9px rgb(66,26,104);
+    box-shadow: -7px 11px 25px -9px rgb(66,26,104);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+}
+
+/* Edit cart border radius and outline color    */
+
+.card {
+    border-radius: 10px;
+    border: 1px solid #000000;
+    border-color: rgba(126, 165, 127, 0.24);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    -webkit-box-shadow: -7px 11px 25px -9px rgb(114,57,174);
+    -moz-box-shadow: -7px 11px 25px -9px rgb(66,26,104);
+    box-shadow: -7px 11px 25px -9px rgb(66,26,104);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+}
+
