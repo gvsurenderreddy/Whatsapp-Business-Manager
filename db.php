@@ -1,11 +1,4 @@
 <?php
-//Write code for db.php
 
-//Make sure to use the correct database credentials
-
-
-//Make sure to use the correct database credentials
-
-
-
-
+    header('location: index.php');
+    exit();
