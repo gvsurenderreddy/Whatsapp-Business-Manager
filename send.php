@@ -24,20 +24,7 @@
 <body>
 <!-- navbar -->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">WhatsappMan</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="settings.php">Settings</a>
-            <a class="nav-item nav-link" href="send.php">Send</a>
-            <a class="nav-item nav-link" href="about.php">About</a>
-        </div>
-    </div>
-</nav>
+<?php include 'navbar.php'; ?>
 <!-- Send page with 3 columns, left menu , middle main content form and other things, right menu essential links -->
 <div class="container-fluid">
     <div class="row">
@@ -61,8 +48,13 @@
                 <div class="card-header">
                     <h5>Send Message</h5>
                 </div>
+                <!-- Constraints:
+A text message can be a max of 4096 characters long.
+
+-->
+
                 <div class="card-body">
-                    <form action="send.php" method="post">
+                    <form action="sendWA.php" method="post">
                         <div class="form-group row">
                             <label for="number" class="col-sm-2 col-form-label">Number</label>
                             <div class="col-sm-10">
