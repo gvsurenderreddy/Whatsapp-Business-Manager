@@ -51,6 +51,12 @@
         </a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="notifications.php">
+            <span data-feather="file-text" class="align-text-bottom"></span>
+            Notifications
+        </a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="send.php">
             <span data-feather="file-text" class="align-text-bottom"></span>
             Send Messages
