@@ -53,38 +53,38 @@
                 </tr>
                 </thead>
                 <tbody>
-<!--                --><?php
-//                $servername = "localhost";
-//                $username = "root";
-//                $password = "";
-//                $dbname = "whatsapp";
-//
-//                // Create connection
-//
-//                $conn = new mysqli($servername, $username, $password, $dbname);
-//                // Check connection
-//
-//                if ($conn->connect_error) {
-//                    die("Connection failed: " . $conn->connect_error);
-//                }
-//
-//                $sql = "SELECT * FROM replies";
-//
-//                $result = $conn->query($sql);
-//
-//                if ($result->num_rows > 0) {
-//                    // output data of each row
-//
-//                    while($row = $result->fetch_assoc()) {
-//                        echo "<tr><td>" . $row["message"]. "</td><td>" . $row["reply"]. "</td><td>" . $row["time"]. "</td></tr>";
-//                    }
-//                } else {
-//                    echo "0 results";
-//                }
-//
-//                $conn->close();
-//
-//                ?>
+                <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "whatsapp";
+
+                // Create connection
+
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT * FROM replies";
+
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // output data of each row
+
+                    while($row = $result->fetch_assoc()) {
+                        echo "<tr><td>" . $row["message"]. "</td><td>" . $row["reply"]. "</td><td>" . $row["time"]. "</td></tr>";
+                    }
+                } else {
+                    echo "0 results";
+                }
+
+                $conn->close();
+
+                ?>
                 </tbody>
             </table>
         </div>
@@ -175,7 +175,7 @@
             <h5 class="mb-1">Register for free</h5>
         </li>
         <li class="list-inline-item">
-            <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+            <a href="signup.php" class="btn btn-danger btn-rounded">Sign up!</a>
         </li>
     </ul>
     <!-- Call to action -->
