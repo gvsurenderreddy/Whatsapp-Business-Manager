@@ -78,7 +78,7 @@
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item">
+                        <div class="carousel-item" >
                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
                             <div class="carousel-caption d-none d-md-block">
                                 <div class="card">
@@ -98,7 +98,9 @@
                                 <p>Some representative placeholder content for the second slide.</p>
                             </div>
                         </div>
-                        <div class="carousel-item active">
+                        <div class="carousel-item active" style="background-image: url("https://images.pexels.com/photos/4353618/pexels-photo-4353618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")">
+                            <!--Image for the third slide-->
+
                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Third slide label</h5>
@@ -120,39 +122,177 @@
     </div>
 </article>
 <!-- PRODUCT COMING SOON BANNER -->
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Basic</h5>
-                    <p class="card-text text-center">Get all the basic features with our basic plan.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
 
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Pro</h5>
-                    <p class="card-text text-center">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+<!-- Features -->
+<div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom">Companies using WhatsappMan</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://images.pexels.com/photos/3028127/pexels-photo-3028127.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">KFC ZA</h3>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                            <small>Earth</small>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                            <small>3d</small>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Premium</h5>
-                    <p class="card-text text-center">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://images.pexels.com/photos/267392/pexels-photo-267392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h3>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                            <small>Gundo</small>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                            <small>4d</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://images.pexels.com/photos/267392/pexels-photo-267392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h3>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                            <small>California</small>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                            <small>5d</small>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!-- Features -->
+<!--<div class="container">-->
+<!--    <div class="row">-->
+<!--        <div class="col-sm-4">-->
+<!--            <div class="card">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title text-center">Basic</h5>-->
+<!--                    <p class="card-text text-center">Get all the basic features with our basic plan.</p>-->
+<!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+<!--                </div>-->
+<!---->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-sm-4">-->
+<!--            <div class="card">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title text-center">Pro</h5>-->
+<!--                    <p class="card-text text-center">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-sm-4">-->
+<!--            <div class="card">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title text-center">Premium</h5>-->
+<!--                    <p class="card-text text-center">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 <!--- Compare Plans Table -->
+
+<!--- Features -->
+
+<div class="container px-4 py-5" id="icon-grid">
+    <h2 class="pb-2 border-bottom">Icon grid</h2>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+        <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"></use></svg>
+            <div>
+                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
+                <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"></use></svg>
+            <div>
+                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
+                <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"></use></svg>
+            <div>
+                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
+                <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"></use></svg>
+            <div>
+                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
+                <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"></use></svg>
+            <div>
+                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
+                <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"></use></svg>
+            <div>
+                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
+                <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#geo-fill"></use></svg>
+            <div>
+                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
+                <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"></use></svg>
+            <div>
+                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
+                <p>Paragraph of text beneath the heading to explain the heading.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--- Features -->
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
@@ -201,70 +341,8 @@
 <br>
 <br>
 
-<!--- Slide show with words about the product -->
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title text-center">WhatsappMan</h5>
-                    <p class="card-text text-center">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<br>
-<br>
-<br>
-<!--- Slide show with words about the product -->
 
 
-<!--<div class="container">-->
-<!--    <div class="row">-->
-<!--        <div class="col-sm-12">-->
-<!--            <div class="card">-->
-<!--                <div class="card-body">-->
-<!--                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">-->
-<!--                        <ol class="carousel-indicators">-->
-<!--                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>-->
-<!--                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>-->
-<!--                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>-->
-<!--                        </ol>-->
-<!--                        <div class="carousel-inner">-->
-<!--                            <div class="carousel-item active">-->
-<!--                                <img class="d-block w-100" src="https://www.w3schools.com/bootstrap4/la.jpg" alt="First slide">-->
-<!--                            </div>-->
-<!--                            <div class="carousel-item">-->
-<!--                                <img class="d-block w-100" src="https://www.w3schools.com/bootstrap4/chicago.jpg" alt="Second slide">-->
-<!--                            </div>-->
-<!--                            <div class="carousel-item">-->
-<!--                                <img class="d-block w-100" src="https://www.w3schools.com/bootstrap4/ny.jpg" alt="Third slide">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">-->
-<!--                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-<!--                            <span class="sr-only">Previous</span>-->
-<!--                        </a>-->
-<!--                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">-->
-<!--                            <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-<!--                            <span class="sr-only">Next</span>-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!---->
-<!--</div>-->
-<!--<br>-->
-<!--<br>-->
-<!--<br>-->
-<!-- end of small auto image slider -->
-
-<!-- card with sign up form with all sign up options also include logos and symbols -->
-<!--center card with sign up form -->
 
 <div class="container">
     <div class="row align-items-md-stretch">
@@ -286,10 +364,8 @@
 </div>
 
 
-
-<!-- end of card with sign up form with all sign up options also include logos and symbols -->
-
-
-
+<!-- Promo -->
+<?php include 'promo.php'; ?>
+<!-- Footer -->
 </body>
 </html>

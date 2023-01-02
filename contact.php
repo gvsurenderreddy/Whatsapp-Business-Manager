@@ -27,85 +27,42 @@
 <!-- Jumbotron -->
 <br>
 <br>
-
-<!-- Contact Form -->
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="card">
-                <div class="card-header">
-                    <h5>Menu</h5>
-                </div>
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group list-group-item"><a href="index.php">Home</a></li>
-                        <li class="list-group list-group-item"><a href="settings.php">Settings</a></li>
-                        <li class="list-group list-group-item"><a href="send.php">Send</a></li>
-
-                    </ul>
-                </div>
-            </div>
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 mb-3">WhatsappMan</h1>
+            <p class="col-lg-10 fs-4">Contact Us</p>
         </div>
-        <div class="col-sm-6">
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1 class="display-4">Contact Us</h1>
-                    <p class="lead">If you have any questions or concerns, please contact us.</p>
-                </div>
-            </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+     <!--Make contact form here-->
+            <form class="p-4 p-md-5 border rounded-3 bg-light">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="We will reach out to you">
+                    <label for="floatingInput">Email address</label>
 
-            <div class="card">
-                <div class="card-header">
-                    <h5>Contact Us</h5>
                 </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingPassword" placeholder="Your Name">
+                    <label for="floatingPassword">Name</label>
 
-                <div class="card-body">
-                    <form action="contact.php" method="post">
-                        <div class="form-group row">
-                            <label for="name" class="col-sm-2 col-form-label">Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="email" class="col-sm-2 col-form-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="message" class="col-sm-2 col-form-label">Message</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" id="message" name="message" rows="3"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Send</button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card">
-                <div class="card-header">
-                    <h5>Essential Links</h5>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingPassword"  placeholder="Your Message">
+                    <label for="floatingPassword">Message</label>
                 </div>
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group list-group-item"><a href="https://www.facebook.com/">Facebook</a></li>
-                        <li class="list-group list-group-item"><a href="https://www.instagram.com/">Instagram</a></li>
-                        <li class="list-group list-group-item"><a href="https://www.twitter.com/">Twitter</a></li>
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+            </form>
 
-                    </ul>
-                </div>
-            </div>
+
         </div>
     </div>
 </div>
+<?php include 'promo.php'; ?>
 <!-- Footer -->
 <?php include 'footer.php'; ?>
 
