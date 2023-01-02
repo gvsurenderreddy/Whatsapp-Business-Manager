@@ -12,8 +12,9 @@ $message = $_POST['message'];
 
 $client = new GuzzleHttp\Client();
 
+$token ="EAAI3PuCd988BADxJIt4Hr79ktMAp7z7FgkqoRJnyYZB1Ri4FkV3un4kKAqoJKCxdZChFZAVeQFF90JN8ZBgZBLTzZBtmfZBI2EyuIlzznB8NvAZCoMYg4ysI76kPXTtr9D4JbkoPqtrEEH2uu1ZChch1VTla1Ns2n0nHXBZCscPRDqyvuW9Pv5kbb3WVjrlXTtavotTLex1LGqZAAZDZD";
 $headers = [
-    'Authorization' => 'Bearer EAAI3PuCd988BABXQDVntUDL8HKVsuYnJWpymPDu3CZCM8Ad6OZAViosqL9CGZCuSxnWZAfYiZAogPZBhT3WINZBaB6S50dexOHFSZBk4OZAZACwogNnaGsFOZAfxxwkIZBNbTYKpX5elZAYBf7GZCnxAhkfUlVQyJVwxIlk5v0iCWovUsZA8xPZCfl7Cv3sZBZBObzC10ZB9Y0QchObTGSnywZDZD',
+    'Authorization' => 'Bearer '.$token,
     'Content-Type' => 'application/json'
 ];
 ////$body = '{ "messaging_product":
