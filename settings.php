@@ -22,27 +22,7 @@
 </head>
 <body>
 <!-- navbar -->
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">WhatsappMan</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="index.php">Home</a>
-            <a class="nav-item nav-link" href="settings.php">Settings</a>
-            <!-- Dashboard link -->
-            <a class="nav-item nav-link" href="dashboard.php">Dashboard</a>
-            <a class="nav-item nav-link" href="login.php">Login</a>
-            <!-- bots link -->
-            <a class="nav-item nav-link" href="bots.php">Bots</a>
-
-            <a class="nav-item nav-link" href="about.php">About</a>
-        </div>
-    </div>
-</nav>
-
+<?php include 'navbar.php';?>
 <!-- navbar end -->
 
 <!-- settings -->
@@ -53,71 +33,13 @@
             <h1 class="text-center">Settings</h1>
         </div>
     </div>
+    <!-- WHATSAPPMAN PLATFORM SETTINGS -->
     <div class="row">
         <div class="col-md-12">
-            <h3 class="text-center">Change your settings here</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="text-center">Change your settings here</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="text-center">Change your settings here</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="text-center">Change your settings here</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="text-center">Change your settings here</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="text-center">Change your settings here</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="text-center">Change your settings here</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="text-center">Change your settings here</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="text-center">Change your settings here</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="text-center">Change your settings here</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="text-center">Change your settings here</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="text-center">Change your settings here</h3>
+            <h2 class="text-center">WhatsappMan Platform Settings</h2>
         </div>
 
     </div>
-
-
-
-</div>
 
 <!-- settings end -->
 

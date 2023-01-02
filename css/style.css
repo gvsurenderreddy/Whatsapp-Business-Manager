@@ -15,7 +15,25 @@
     backdrop-filter: blur(5.4px);
     -webkit-backdrop-filter: blur(5.4px);
 }
-
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+.nav-scroller .nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    color: rgba(255, 255, 255, .75);
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
 .btn {
 /** Modern material button **/
     background: linear-gradient(90deg, rgb(56, 220, 62), rgb(62, 122, 218), rgb(44, 76, 139), rgba(42, 114, 14, 0.87));

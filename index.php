@@ -53,7 +53,23 @@
 
 <?php include 'navbar.php'; ?>
 <br>
-<!-- pricings cards horizontal -->
+<br>
+
+<!-- main content -->
+<!-- PRODUCT COMING SOON BANNER -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">WhatsappMan</h1>
+                    <p class="lead">WhatsappMan is a Whatsapp Manager that allows you to send messages to your contacts.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- PRODUCT COMING SOON BANNER -->
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
@@ -86,9 +102,134 @@
         </div>
     </div>
 </div>
-<!-- end of pricings cards horizontal -->
+<!--- Compare Plans Table -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Feature</th>
+                    <th scope="col">Basic</th>
+                    <th scope="col">Pro</th>
+                    <th scope="col">Premium</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Whatsapp</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">Whatsapp</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">Whatsapp</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">Whatsapp</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">Whatsapp</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">Whatsapp</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">Whatsapp</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">Whatsapp</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">Whatsapp</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">Whatsapp</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">Whatsapp</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">Whatsapp</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">Whatsapp</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row">Whatsapp</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <!-- end of table -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--- End of Compare Plans Table -->
+<br>
+<br>
+<br>
 
-<!-- small auto image slider -->
+<!--- Slide show with words about the product -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">WhatsappMan</h5>
+                    <p class="card-text text-center">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<!--- Slide show with words about the product -->
+
 
 <div class="container">
     <div class="row">
@@ -127,7 +268,9 @@
     </div>
 
 </div>
-
+<br>
+<br>
+<br>
 <!-- end of small auto image slider -->
 
 <!-- card with sign up form with all sign up options also include logos and symbols -->
