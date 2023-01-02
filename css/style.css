@@ -74,3 +74,25 @@
     -webkit-backdrop-filter: blur(5.4px);
 }
 
+/* Edit Scrollbar to look like nav bar   */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(90deg, rgb(56, 220, 62), rgb(106,195,236, 0.20),rgb(214,208,236, 0.10), rgba(136, 192, 114, 0.1));
+    border-radius: 10px;
+    -webkit-box-shadow: -7px 11px 25px -9px rgb(114,57,174);
+    -moz-box-shadow: -7px 11px 25px -9px rgb(66,26,104);
+    box-shadow: -7px 11px 25px -9px rgb(66,26,104);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, rgb(56, 220, 62), rgb(106,195,236, 0.20),rgb(214,208,236, 0.10), rgba(136, 192, 114, 0.1));
+    border-radius: 10px;
+    -webkit-box-shadow: -7px 11px 25px -9px rgb(73, 174, 57);
+    -moz-box-shadow: -7px 11px 25px -9px rgb(66,26,104);
+    box-shadow: -7px 11px 25px -9px rgb(66,26,104);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+}

@@ -201,8 +201,10 @@
             <div class="card-body">
                 <h1 class="card-title pricing-card-title">R0<small class="text-muted fw-light">/mo</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
+                    <li>10K Messages </li>
                     <li>10 users included</li>
                     <li>2 GB of storage</li>
+
                     <li>Email support</li>
                     <li>Help center access</li>
                 </ul>
@@ -218,9 +220,11 @@
             <div class="card-body">
                 <h1 class="card-title pricing-card-title">R159<small class="text-muted fw-light">/mo</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                    <li>20 users included</li>
-                    <li>10 GB of storage</li>
+                 <li>20K+ Messages</li>
+                    <li>10 users included</li>
+                    <li>20 GB of storage</li>
                     <li>Priority email support</li>
+
                     <li>Help center access</li>
                 </ul>
                 <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
@@ -235,6 +239,8 @@
             <div class="card-body">
                 <h1 class="card-title pricing-card-title">R299<small class="text-muted fw-light">/mo</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
+                    <li>50K+ Messages</li>
+
                     <li>30 users included</li>
                     <li>15 GB of storage</li>
                     <li>Phone and email support</li>
