@@ -24,7 +24,12 @@
 <!-- navbar -->
 
 <?php include 'navbar.php'; ?>
-<!-- Send page with 3 columns, left menu , middle main content form and other things, right menu essential links -->
+<!-- Jumbotron -->
+<br>
+<br>
+
+<!-- Contact Form -->
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3">
@@ -43,14 +48,17 @@
             </div>
         </div>
         <div class="col-sm-6">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Contact Us</h1>
+                    <p class="lead">If you have any questions or concerns, please contact us.</p>
+                </div>
+            </div>
+
             <div class="card">
                 <div class="card-header">
                     <h5>Contact Us</h5>
                 </div>
-                <!-- Constraints:
-A text message can be a max of 4096 characters long.
-
--->
 
                 <div class="card-body">
                     <form action="contact.php" method="post">
