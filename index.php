@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>WhatsappMan</title>
@@ -134,11 +134,11 @@
                     <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">KFC ZA</h3>
                     <ul class="d-flex list-unstyled mt-auto">
                         <li class="me-auto">
-                            <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                            <img src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
                         </li>
                         <li class="d-flex align-items-center me-3">
                             <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
-                            <small>Earth</small>
+                            <small>SA</small>
                         </li>
                         <li class="d-flex align-items-center">
                             <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
@@ -155,11 +155,11 @@
                     <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h3>
                     <ul class="d-flex list-unstyled mt-auto">
                         <li class="me-auto">
-                            <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                            <img src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
                         </li>
                         <li class="d-flex align-items-center me-3">
                             <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
-                            <small>Gundo</small>
+                            <small>SA</small>
                         </li>
                         <li class="d-flex align-items-center">
                             <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
@@ -251,103 +251,45 @@
         </div>
     </div>
 </div>
-<!-- Features -->
-<!--<div class="container">-->
-<!--    <div class="row">-->
-<!--        <div class="col-sm-4">-->
-<!--            <div class="card">-->
-<!--                <div class="card-body">-->
-<!--                    <h5 class="card-title text-center">Basic</h5>-->
-<!--                    <p class="card-text text-center">Get all the basic features with our basic plan.</p>-->
-<!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
-<!--                </div>-->
-<!---->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="col-sm-4">-->
-<!--            <div class="card">-->
-<!--                <div class="card-body">-->
-<!--                    <h5 class="card-title text-center">Pro</h5>-->
-<!--                    <p class="card-text text-center">With supporting text below as a natural lead-in to additional content.</p>-->
-<!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="col-sm-4">-->
-<!--            <div class="card">-->
-<!--                <div class="card-body">-->
-<!--                    <h5 class="card-title text-center">Premium</h5>-->
-<!--                    <p class="card-text text-center">With supporting text below as a natural lead-in to additional content.</p>-->
-<!--                    <a href="#" class="btn btn-primary">Go somewhere</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!--- Compare Plans Table -->
-
-<!--- Features -->
 
 <div class="container px-4 py-5" id="icon-grid">
-    <h2 class="pb-2 border-bottom">Icon grid</h2>
+    <h2 class="pb-2 border-bottom">Some key features</h2>
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
         <div class="col d-flex align-items-start">
             <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"></use></svg>
             <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
+                <h3 class="fw-bold mb-0 fs-4">Bulk Text</h3>
+                <p>Bulk Whatsapp Custom messages, with a click of a button.</p>
             </div>
         </div>
         <div class="col d-flex align-items-start">
             <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"></use></svg>
             <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
+                <h3 class="fw-bold mb-0 fs-4">AI Responder</h3>
+                <p>Powered by AI to respond to your customers, 24/7</p>
             </div>
         </div>
         <div class="col d-flex align-items-start">
             <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"></use></svg>
             <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
+                <h3 class="fw-bold mb-0 fs-4">Schedule</h3>
+                <p>Schedule your messages to be sent at a later time , date or even year</p>
             </div>
         </div>
         <div class="col d-flex align-items-start">
-            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"></use></svg>
+            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#people-circle"></use></svg>
             <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
+                <h3 class="fw-bold mb 0 fs-4">Tailored User Groups</h3>
+                <p>Group your users into different categories, and send them messages based on their category</p>
+
             </div>
+
         </div>
-        <div class="col d-flex align-items-start">
-            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"></use></svg>
-            <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
-            </div>
-        </div>
-        <div class="col d-flex align-items-start">
-            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"></use></svg>
-            <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
-            </div>
-        </div>
-        <div class="col d-flex align-items-start">
-            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#geo-fill"></use></svg>
-            <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
-            </div>
-        </div>
-        <div class="col d-flex align-items-start">
-            <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"></use></svg>
-            <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
-            </div>
-        </div>
+        <!-- Another row -->
+
+
+
     </div>
 </div>
 
