@@ -1,21 +1,4 @@
-<?php
-require_once('vendor\autoload.php');
-use Segment\Segment;
 
-# Set up our Segment tracking and
-# alias to Analytics for convenience
-class_alias('Segment', 'Analytics');
-Segment::init("7Lhrvirq6zGAX2IAROgOPQiLKxgEvthH");
-
-Segment::identify(array(
-    "userId" => $user->id,
-    "traits" => array(
-        "name" => $user->fullname,
-        "email" => $user->email
-    )
-));
-
-?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>

@@ -1,22 +1,4 @@
 <!-- Navbar -->
-<?php
- require_once('vendor\autoload.php');
-  use Segment\Segment;
-
-# Set up our Segment tracking and
-# alias to Analytics for convenience
-class_alias('Segment', 'Analytics');
-Segment::init("7Lhrvirq6zGAX2IAROgOPQiLKxgEvthH");
-
-Segment::identify(array(
-    "userId" => $user->id,
-    "traits" => array(
-        "name" => $user->fullname,
-        "email" => $user->email
-    )
-));
-
-?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="index.php">WhatsappMan</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

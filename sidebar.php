@@ -63,10 +63,17 @@
             <span data-feather="file-text" class="align-text-bottom"></span>
             Send Messages
         </a>
-    </li>    <li class="nav-item">
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="send_WA.php">
             <span data-feather="file-text" class="align-text-bottom"></span>
             Send Messages(Twilio)
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="send_im.php">
+            <span data-feather="file-text" class="align-text-bottom"></span>
+            Send Bulk Sms
         </a>
     </li>
     <li class="nav-item">

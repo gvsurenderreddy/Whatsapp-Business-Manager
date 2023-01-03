@@ -2,6 +2,6 @@
     "require": {
         "guzzlehttp/guzzle": "^7.5",
         "segmentio/analytics-php": "^3.5",
-        "twilio/sdk": "^6.44"
+        "twilio/sdk": "^6.44",
     }
 }
