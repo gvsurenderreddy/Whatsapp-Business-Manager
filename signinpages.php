@@ -56,7 +56,28 @@
             </div>
 <!--- Main Content -->
 
+            <div class="card-body">
+                <form action="sendWA.php" method="post">
+                    <div class="form-group row">
+                        <label for="number" class="col-sm-2 col-form-label">Number</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="number" name="number" placeholder="Number">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="message" class="col-sm-2 col-form-label">Message</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                        </div>
+                    </div>
 
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
             <!--- Main Content -->
         </main>
     </div>

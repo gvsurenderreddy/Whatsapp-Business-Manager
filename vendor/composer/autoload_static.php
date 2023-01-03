@@ -14,6 +14,15 @@ class ComposerStaticInit993a93e5790f8f6dc2f8ab8064b8aabc
     );
 
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Twilio\\' => 7,
+        ),
+        'S' => 
+        array (
+            'Segment\\Test\\' => 13,
+            'Segment\\' => 8,
+        ),
         'P' => 
         array (
             'Psr\\Http\\Message\\' => 17,
@@ -28,6 +37,18 @@ class ComposerStaticInit993a93e5790f8f6dc2f8ab8064b8aabc
     );
 
     public static $prefixDirsPsr4 = array (
+        'Twilio\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twilio/sdk/src/Twilio',
+        ),
+        'Segment\\Test\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/segmentio/analytics-php/test',
+        ),
+        'Segment\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/segmentio/analytics-php/lib',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-factory/src',

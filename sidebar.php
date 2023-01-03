@@ -63,6 +63,11 @@
             <span data-feather="file-text" class="align-text-bottom"></span>
             Send Messages
         </a>
+    </li>    <li class="nav-item">
+        <a class="nav-link" href="send_WA.php">
+            <span data-feather="file-text" class="align-text-bottom"></span>
+            Send Messages(Twilio)
+        </a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="send.php">
