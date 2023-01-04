@@ -29,7 +29,7 @@ if (isset($_REQUEST['Body'])) {
     } elseif (preg_match('/bye/i', $body)) {
         $reply = "Goodbye";
     } // add 30 more elseif statements to check for other commands
-    elseif (preg_match('/help/i', $body)) {
+    elseif (preg_match('/stuff/i', $body)) {
         $reply = "You can say hello, bye, help, etc";
     } elseif (preg_match('/how are you/i', $body)) {
         $reply = "I am fine, thanks for asking";
@@ -39,7 +39,13 @@ if (isset($_REQUEST['Body'])) {
         $reply = "I am 1 day old";
     } //add more commands to mock a news app and balance check app
     elseif (preg_match('/news/i', $body)) {
-        $reply = "Here is the latest news";
+        $reply = new GuzzleHttp\Client();
+        $response = $reply->request('GET', 'https://newsapi.org/v2/top-headlines?country=us&apiKey=ab57555de8074a80af9454771c1d1a9b');
+
+        $reply = json_decode($response->getBody()->getContents());
+        //Display all fetched news articles in summary
+        $reply = $reply->articles[0]->title . " " . $reply->articles[0]->description . " " . $reply->articles[0]->url;
+
     } elseif (preg_match('/balance/i', $body)) {
         $reply = "Your balance is 1000";
     } elseif (preg_match('/weather/i', $body)) {
@@ -58,9 +64,8 @@ if (isset($_REQUEST['Body'])) {
             $response = $reply->request('GET', 'https://newsapi.org/v2/top-headlines?country=us&apiKey=ab57555de8074a80af9454771c1d1a9b');
 
         $reply = json_decode($response->getBody()->getContents());
-     //Detailed news article
-       // $reply = $reply->articles[0]->title;
-
+    //Display all fetched news articles in summary
+    $reply = $reply->articles[0]->title . " " . $reply->articles[0]->description . " " . $reply->articles[0]->url;
 
 
     } elseif (preg_match('/2/i', $body)) {
@@ -84,8 +89,7 @@ if (isset($_REQUEST['Body'])) {
 //            $reply .= "It is a nice day today, wear whatever you want";
 //        }
 
-        //Send mock weather with breaks and emojis to make it look cute
-        $reply = "The weather is sunny ☀️ with a temperature of 25 degrees celsius. It is a nice day today, wear whatever you want";
+        //Send mock weather with breaks
 
     } elseif (preg_match('/3/i', $body)) {
         $reply = "You selected 3";
@@ -110,8 +114,19 @@ if (isset($_REQUEST['Body'])) {
     } else {
        //Long message with all the numbers with their responses next to them take number and mock reply
         $arr = array(
-            "1. News<br>2. Weather<br>3. Time<br>4. Date<br>5. Location<br>6. Balance<br>7. Help<br>8. Trends<br>9. 9<br>10. 10"
-        );
+
+            "0" => "Choose one of the options and get talking with us." . "\n \n \n",
+            "1" => "1. *News* - Get news." . "\n ",
+            "2" => "2. *Weather*". "\n",
+            "3" => "3. *Time*". "\n",
+            "4" => "4. *Date*". "\n",
+            "5" => "5. *Location*". "\n",
+            "6" => "6. *Balance*". "\n",
+            "7" => "7. *Help*". "\n",
+            "8" => "8. *Trends*". "\n",
+            "9" => ".9". "\n",
+            "10" => ".10". "\n"
+         );
         $reply = implode(" ", $arr);
 
     }
