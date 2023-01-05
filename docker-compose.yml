@@ -1,17 +1,75 @@
-version: '2'
+###############################################################################
+#                          Generated on phpdocker.io                          #
+###############################################################################
+version: '3.1'
 services:
-  mariadb:
-    image: docker.io/bitnami/mariadb:10.6
-    environment:
-      - MARIADB_ROOT_PASSWORD=bitnami
-    volumes:
-      - 'mariadb_data:/bitnami'
+  memcached:
+    image: 'memcached:alpine'
 
-  adminer:
-      image: adminer
-      restart: always
-      ports:
-          - 40003:8080
-volumes:
-  mariadb_data:
-    driver: local
+  mailhog:
+    image: 'mailhog/mailhog:latest'
+    ports:
+      - '24002:8025'
+
+  redis:
+    image: 'redis:alpine'
+
+  mysql:
+    image: 'mysql:5.6'
+    working_dir: /application
+    volumes:
+      - '.:/application'
+    environment:
+      - MYSQL_ROOT_PASSWORD=gundo
+      - MYSQL_DATABASE=gundo
+      - MYSQL_USER=gundo
+      - MYSQL_PASSWORD=gundo
+    ports:
+      - '24003:3306'
+
+  mariadb:
+    image: 'mariadb:10.6'
+    working_dir: /application
+    volumes:
+      - '.:/application'
+    environment:
+      - MYSQL_ROOT_PASSWORD=gundo
+      - MYSQL_DATABASE=gundo
+      - MYSQL_USER=gundo
+      - MYSQL_PASSWORD=gundo
+    ports:
+      - '24004:3306'
+
+  postgres:
+    image: 'postgres:11.1-alpine'
+    working_dir: /application
+    volumes:
+      - '.:/application'
+    environment:
+      - POSTGRES_USER=gundo
+      - POSTGRES_PASSWORD=gundo
+      - POSTGRES_DB=gundo
+    ports:
+      - '24005:5432'
+
+  elasticsearch:
+    image: 'elasticsearch:6.5.4'
+
+  clickhouse:
+    image: 'yandex/clickhouse-server:latest'
+
+  webserver:
+    image: 'nginx:alpine'
+    working_dir: /application
+    volumes:
+      - '.:/application'
+      - './phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf'
+    ports:
+      - '24001:80'
+
+  php-fpm:
+    build: phpdocker/php-fpm
+    working_dir: /application
+    volumes:
+      - '.:/application'
+      - './phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/8.2/fpm/conf.d/99-overrides.ini'
