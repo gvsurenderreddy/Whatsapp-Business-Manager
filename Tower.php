@@ -132,7 +132,7 @@ if (isset($_REQUEST['Body'])) {
     }
 
     $from = $_REQUEST['From'];
-    //STRIP CELL NUMBERS FROM whatsapp:+27636754400
+    //Get the number of the user who sent the message by stripping the + from the number
     $from = substr($from, 10);
     $from = "+" . $from;
     $to = $_REQUEST['To'];
