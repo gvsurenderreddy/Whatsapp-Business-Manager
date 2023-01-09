@@ -19,6 +19,19 @@ try {
     echo $e->getMessage();
 }
 
+/**
+ * @param string $from
+ * @param mixed $body
+ * @param mixed $time
+ * @return void
+ */
+function logEvents(string $from, mixed $body, mixed $time): void
+{
+    $log = fopen("log.txt", "a");
+    fwrite($log, "Message received from $from: $body, $time \n");
+    fclose($log);
+}
+
 if (isset($_REQUEST['Body'])) {
     $body = $_REQUEST['Body'];
 //CREATE MOCK CHATBOT RESPONSE BASED on CERTAIN COMMANDS , WHEN USER SAYS HELLO, THE BOT WILL REPLY WITH A WELCOME MESSAGE AND WHEN USER SAYS BYE, THE BOT WILL REPLY WITH A GOODBYE MESSAGE AND WHEN USER SAYS ANYTHING ELSE, THE BOT WILL REPLY WITH A DEFAULT MESSAGE
@@ -66,7 +79,6 @@ if (isset($_REQUEST['Body'])) {
         $reply = json_decode($response->getBody()->getContents());
     //Display all fetched news articles in summary
     $reply = $reply->articles[0]->title . " " . $reply->articles[0]->description . " " . $reply->articles[0]->url;
-
 
     } elseif (preg_match('/2/i', $body)) {
         //Weather
@@ -124,8 +136,8 @@ if (isset($_REQUEST['Body'])) {
             "6" => "6. *Balance*". "\n",
             "7" => "7. *Help*". "\n",
             "8" => "8. *Trends*". "\n",
-            "9" => ".9". "\n",
-            "10" => ".10". "\n"
+            "9" => "9. *ChaptGPT*". "\n",
+            "10" => "10. *Finances*". "\n"
          );
         $reply = implode(" ", $arr);
 
@@ -206,7 +218,5 @@ if (isset($_REQUEST['Body'])) {
     }
     echo "Message sent successfully";
    echo $reply;
-    $log = fopen("log.txt", "a");
-    fwrite($log, "Message received from $from: $body, $time \n");
-    fclose($log);
+    logEvents($from, $body, $time);
 }

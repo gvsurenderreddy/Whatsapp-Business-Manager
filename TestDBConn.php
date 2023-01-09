@@ -1,26 +1,17 @@
 <?php
-
-//TEST MYSQL CONNECTION
-
-$servername = "localhost:40002";
-
-$username = "sifhufhi";
-
-$password = "sifhufhi";
-
-$dbname = "wabusiness";
-
-//$port = "40002";
+declare(strict_types=1);
 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$servername = "localhost";
 
-// Check connection
+$username = "gundo";
+
+$password = "gundo";
+
+$dbname = "gundo";
+
+$port = 24003;
+
+$conn = new mysqli($servername, $username, $password, $dbname, $port);
 
 if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
-
-echo "Connected successfully";
-
-$conn->close();
-
-

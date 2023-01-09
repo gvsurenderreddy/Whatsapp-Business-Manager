@@ -15,7 +15,7 @@ services:
     image: 'redis:alpine'
 
   mysql:
-    image: 'mysql:5.6'
+    image: 'mysql:8.0'
     working_dir: /application
     volumes:
       - '.:/application'
@@ -58,6 +58,7 @@ services:
   clickhouse:
     image: 'yandex/clickhouse-server:latest'
 
+
   webserver:
     image: 'nginx:alpine'
     working_dir: /application
@@ -73,3 +74,18 @@ services:
     volumes:
       - '.:/application'
       - './phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/7.4/fpm/conf.d/99-overrides.ini'
+
+  phpmyadmin:
+    depends_on:
+      - mysql
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "8081:40000"
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: magento
+
+  volumes:
+
+
