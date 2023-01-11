@@ -10,5 +10,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="6680624b05" level="application" />
+    <orderEntry type="library" name="feather-icons" level="application" />
   </component>
 </module>

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!--import fancy icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/6680624b05.js" crossorigin="anonymous"></script>
     <!--import jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--import bootstrap js -->
@@ -86,7 +86,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title text-center">Basic</h5>
                                         <p class="card-text text-center">Get all the basic features with our basic plan.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        <a href="send_WA.php" class="btn btn-primary">Go somewhere</a>
                                     </div>
 
                                 </div>
@@ -118,7 +118,8 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-            </div></div>
+            </div>
+    </div>
 
     </div>
 </article>
@@ -153,7 +154,7 @@
         <div class="col">
             <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://images.pexels.com/photos/267392/pexels-photo-267392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h3>
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Company 2</h3>
                     <ul class="d-flex list-unstyled mt-auto">
                         <li class="me-auto">
                             <img src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
@@ -174,14 +175,14 @@
         <div class="col">
             <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://images.pexels.com/photos/267392/pexels-photo-267392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h3>
+                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Company</h3>
                     <ul class="d-flex list-unstyled mt-auto">
                         <li class="me-auto">
-                            <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                            <img src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
                         </li>
                         <li class="d-flex align-items-center me-3">
                             <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
-                            <small>California</small>
+                            <small>South Africa</small>
                         </li>
                         <li class="d-flex align-items-center">
                             <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
@@ -310,27 +311,27 @@
                 <tbody>
                 <tr>
                     <th scope="row">Whatsapp</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
-                    <th scope="row">Whatsapp</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
+                    <th scope="row">ChatBot</th>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
-                    <th scope="row">Whatsapp</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
+                    <th scope="row">Scheduling</th>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <tr>
-                    <th scope="row">Whatsapp</th>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
+                    <th scope="row">Sms</th>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>Yes</td>
                 </tr>
                 <!-- end of table -->
                 </tbody>
