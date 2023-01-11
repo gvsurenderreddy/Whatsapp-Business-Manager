@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="0f0d1a9a-ad2a-435a-974a-3738d9c809f9" name="wabusiness@0.0.0.0 Mapping">
+      <data-sources db="c84b90f6-8b5c-4120-8b9e-98164ac100e9" ddl="812a82e7-5e0d-4bd6-9dd2-e2c9418ddd7b" />
+    </mapping>
+    <mapping uuid="e74426b6-9c22-4729-b5ba-942bc0b4fb08" name="wa.sql Mapping">
+      <data-sources db="6a9720ea-747e-494f-84b2-f9bc573c8341" ddl="3d409464-d8da-420e-b9ff-ad6b177a96b5" />
+    </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="3d409464-d8da-420e-b9ff-ad6b177a96b5" />
+          <option name="name" value="wa.sql (DDL)" />
+          <option name="languageId" value="SQLite" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/wa.sql" />
+            </array>
+          </option>
+          <option name="scriptOptions">
+            <map>
+              <entry key="UseCompactDef" value="1" />
+            </map>
+          </option>
+          <option name="scopes">
+            <map>
+              <entry key="$PROJECT_DIR$" value="" />
+            </map>
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>
