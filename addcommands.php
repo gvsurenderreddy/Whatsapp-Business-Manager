@@ -101,17 +101,28 @@
             </div>
         </div>
 <!--- Form with command/trigger and response , it should be more like telling the customer that with this word in any statetment the bot will respond with this message -->
-        <form action="addcommand.php" method="post">
-            <div class="mb-3">
-                <label for="command" class="form-label">Command(A message containing this/these word/s will be responded with the <em style="color:#872c2c">Response you set</em>)</label>
-                <input type="text" class="form-control" id="command" name="command" placeholder="Command">
-            </div>
-            <div class="mb-3">
-                <label for="response" class="form-label">Response(Response can be anything from a simple <em>I am doing good thanks and you)</em></label>
-                <input type="text" class="form-control" id="response" name="response" placeholder="Response">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+
+            <form action="addcommand.php.php" method="post">
+                <div class="form-group row">
+                    <label for="number" class="col-sm-2 col-form-label">Number</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="input" name="input" placeholder="Client Input">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="message" class="col-sm-2 col-form-label">Bot Response</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" id="output" name="output" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </form>
+
         <!--- Main Content -->
     </main>
 </div>

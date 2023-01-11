@@ -4,6 +4,7 @@
         "segmentio/analytics-php": "^3.5",
         "twilio/sdk": "^6.44",
         "abraham/twitteroauth": "^4.0",
-        "ext-mysqli": "*"
+        "ext-mysqli": "*",
+      "ext-openssl": "*"
     }
 }
