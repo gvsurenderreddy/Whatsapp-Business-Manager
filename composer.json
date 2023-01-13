@@ -5,6 +5,7 @@
         "twilio/sdk": "^6.44",
         "abraham/twitteroauth": "^4.0",
         "ext-mysqli": "*",
-      "ext-openssl": "*"
+      "ext-openssl": "*",
+      "ext-pdo": "*"
     }
 }

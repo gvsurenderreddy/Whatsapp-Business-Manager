@@ -4,8 +4,10 @@ declare(strict_types=1);
 include_once 'vendor/autoload.php';
 
 use Twilio\Exceptions\ConfigurationException;
+use Twilio\Exceptions\TwilioException;
 use Twilio\Rest\Client;
-
+$userNumber = $_POST['number'];
+$userMessage = $_POST['message'];
 
 $sid = "ACbad36ae030c637cf243de4663a3ae9a1";
 
@@ -34,11 +36,27 @@ try {
                 "body" => "$message"
             )
         );
-} catch (\Twilio\Exceptions\TwilioException $e) {
+
+} catch (TwilioException $e) {
+    /** Do better error handling here */
     echo $e->getMessage();
+
 }
 
 if ($message->sid) {
+
+//    include_once 'connect.php';
+//    try {
+//        $sql = "INSERT INTO convos (inp, reply) VALUES (:inp, :reply)";
+//        $stmt = $pdo->prepare($sql);
+//    $stmt->execute(['inp' => $userNumber, 'reply' => $userMessage]);
+//        echo "Message sent successfully";
+//    } finally {
+//        $pdo = null;
+//
+//        echo "Message sent successfully";
+//    }
+//    echo "Message sent successfully";
     header('Location: send_WA.php?success=1');
     echo "Message sent successfully";
 } else {

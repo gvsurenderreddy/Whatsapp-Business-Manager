@@ -34,9 +34,7 @@ function logEvents(string $from, mixed $body, mixed $time): void
 
 if (isset($_REQUEST['Body'])) {
     $body = $_REQUEST['Body'];
-//CREATE MOCK CHATBOT RESPONSE BASED on CERTAIN COMMANDS , WHEN USER SAYS HELLO, THE BOT WILL REPLY WITH A WELCOME MESSAGE AND WHEN USER SAYS BYE, THE BOT WILL REPLY WITH A GOODBYE MESSAGE AND WHEN USER SAYS ANYTHING ELSE, THE BOT WILL REPLY WITH A DEFAULT MESSAGE
-    //DO A REGEEX MATCH TO CHECK IF THE MESSAGE CONTAINS A CERTAIN WORD
-    if (preg_match('/hello/i', $body)) {
+  if (preg_match('/hello/i', $body)) {
         $reply = "Hello, Welcome to the chatbot";
 
     } elseif (preg_match('/bye/i', $body)) {

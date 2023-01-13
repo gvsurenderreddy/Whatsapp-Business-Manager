@@ -34,6 +34,8 @@ if (isset($_REQUEST['Body'])) {
     $password = "";
     $dbname = "whatsapp";
 
+    echo  $from;
+
     // Check Number in Database and return the name
 //    $conn = new mysqli($servername, $name, $password, $dbname);
 //    if ($conn->connect_error) {

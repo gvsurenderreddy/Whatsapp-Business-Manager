@@ -1,3 +1,66 @@
+
+<?php
+error_reporting(0);
+/** Check if submit button was clicked */
+if (isset($_POST['submit'])) {
+    /** Handle Input And Output Strings submitted by addcommands.php */
+
+    /** Get variables from self */
+    $userInput = "My name is Borat Sagdiyev and I am from Kazakhstan and I am a very nice person";
+    $userOutput = "What are you doing in my swamp? and what the fuck is  wrong ";
+    $time = time();
+
+
+    /** Store To Database
+     *
+     */
+    $host = 'localhost:24003';
+    $db   = 'gundo';
+    $user = 'gundo';
+    $pass = 'gundo';
+    $port = "3306";
+    $charset = 'utf8mb4';
+
+    $options = [
+        \PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
+        \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
+        \PDO::ATTR_PERSISTENT => true,
+        \PDO::ATTR_EMULATE_PREPARES   => false,
+    ];
+
+    $dsn = "mysql:host=$host;dbname=$db;charset=$charset;port=$port;";
+    try {
+
+        $pdo = new \PDO($dsn, $user, $pass, $options);
+        //Show the connection status
+        /** Insert to bot table */
+        if (empty($userInput) || empty($userOutput)) {
+            /** Generate random values */
+          //  $userInput = rand(1000000000, 9999999999);
+            $userInput = substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 10);
+
+            /**Generate random letters and words */
+            $userOutput = substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 10);
+        }
+        $insert = $pdo->prepare("INSERT INTO bot (input, reply,timestamp) VALUES (:input, :output,:time)");
+        $insert->bindParam(':input', $userInput);
+        $insert->bindParam(':output', $userOutput);
+        $insert->bindParam(':time', $time);
+        $insert->execute();
+        //Print all the submitted values
+        echo "The user number is $userInput and the user message is $userOutput /n";
+        if (!$insert) {
+        } else {
+            echo "Command Added Successfully";
+        }
+
+    } catch (\PDOException $e) {
+//    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        $errorMessage = new \PDOException($e->getMessage(), (int)$e->getCode());
+        echo $errorMessage;
+    }
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,7 +68,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="generator" content="Hugo 0.108.0">
-    <title>Admin</title>
+    <title>Create Commands & Save</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
 
@@ -33,99 +96,112 @@
     <div class="row">
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
             <div class="position-sticky pt-3 sidebar-sticky">
-                <?php include 'sidebar.php';?>
+    <?php include 'sidebar.php';?>
             </div>
+            </div>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Set Up Commands</h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <div class="btn-group me-2">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                    </div>
+                    <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                        <span data-feather="calendar" class="align-text-bottom"></span>
+                        This week
+                    </button>
+                </div>
+            </div>
+<!--- Main Content -->
+            <!-- Table To Display all the commands in the database -->
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Input</th>
+                        <th>Output</th>
+                        <th>Timestamp</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    /**
+                     * @return void
+                     */
+                    function getCommands(): void
+                    {
+                        $host = 'localhost:24003';
+                        $db = 'gundo';
+                        $user = 'gundo';
+                        $pass = 'gundo';
+                        $port = "3306";
+                        $charset = 'utf8mb4';
+
+                        $options = [
+                            \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
+                            \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
+                            \PDO::ATTR_PERSISTENT => true,
+                            \PDO::ATTR_EMULATE_PREPARES => false,
+                        ];
+
+                        $dsn = "mysql:host=$host;dbname=$db;charset=$charset;port=$port;";
+                        try {
+
+                            $pdo = new \PDO($dsn, $user, $pass, $options);
+                            //Show the connection status
+                            /** Insert to bot table */
+                            $select = $pdo->prepare("SELECT * FROM bot");
+                            $select->execute();
+                            $result = $select->fetchAll();
+
+                        } catch (\PDOException $e) { //Catch any errors
+                            $thrownError = new \PDOException($e->getMessage(), (int)$e->getCode());
+                            echo $thrownError;
+                        }
+                    }
+
+                    getCommands();
+
+                    foreach ($result as $row) {
+                        echo "<tr>";
+                        echo "<td>" . $row['id'] . "</td>";
+                        echo "<td>" . $row['input'] . "</td>";
+                        echo "<td>" . $row['reply'] . "</td>";
+                        echo "<td>" . $row['timestamp'] . "</td>";
+                        echo "</tr>";
+                    }
+                    ?>
+
+
+            <div class="card-body">
+                /** process form to self */
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                    <div class="form-group row">
+                        <label for="input" class="col-sm-2 col-form-label">Input</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="input" name="input" placeholder="input">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="message" class="col-sm-2 col-form-label">Output</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="output" name="output" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button id="submit" name="submit" type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--- Main Content -->
+        </main>
     </div>
-
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Create commands for Whatsapp Channel</h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
-                <div class="btn-group me-2">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                </div>
-                <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                    <span data-feather="calendar" class="align-text-bottom"></span>
-                    This week
-                </button>
-            </div>
-        </div>
-        <!--- Main Content -->
-        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item" >
-                            <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
-                            <div class="carousel-caption d-none d-md-block">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center">Basic</h5>
-                                        <p class="card-text text-center">Get all the basic features with our basic plan.</p>
-                                        <a href="send_WA.php" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item active" style="background-image: url("https://images.pexels.com/photos/4353618/pexels-photo-4353618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")">
-                        <!--Image for the third slide-->
-
-                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-<!--- Form with command/trigger and response , it should be more like telling the customer that with this word in any statetment the bot will respond with this message -->
-
-            <form action="addcommand.php.php" method="post">
-                <div class="form-group row">
-                    <label for="number" class="col-sm-2 col-form-label">Number</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="input" name="input" placeholder="Client Input">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="message" class="col-sm-2 col-form-label">Bot Response</label>
-                    <div class="col-sm-10">
-                        <textarea class="form-control" id="output" name="output" rows="3"></textarea>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Save</button>
-                    </div>
-                </div>
-            </form>
-
-        <!--- Main Content -->
-    </main>
-</div>
 </div>
 
 
