@@ -1,8 +1,5 @@
+![image](https://user-images.githubusercontent.com/13138647/223725281-c49839a3-2066-4974-aee2-a5490e75b895.png)
 
-<!-- Make all pages have 3 columns -->
-
-
-<!-- Make all pages have 3 columns -->
 
 # Documentation
 
