@@ -1,13 +1,6 @@
 {
   "name": "sagebytez/whatsappman",
   "description": "Platform for sending whatsapp messages",
-  "require": {
-    "guzzlehttp/guzzle": "*",
-    "segmentio/analytics-php": "*",
-    "twilio/sdk": "*",
-    "abraham/twitteroauth": "*",
-    "ext-pdo": "*"
-  },
   "authors": [
     {
       "name": "Gundo Sifhufhi",
