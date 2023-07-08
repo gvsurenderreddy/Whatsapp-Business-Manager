@@ -1,11 +1,21 @@
 {
-    "require": {
-        "guzzlehttp/guzzle": "^7.5",
-        "segmentio/analytics-php": "^3.5",
-        "twilio/sdk": "^6.44",
-        "abraham/twitteroauth": "^4.0",
-        "ext-mysqli": "*",
-      "ext-openssl": "*",
-      "ext-pdo": "*"
+  "name": "sagebytez/whatsappman",
+  "description": "Platform for sending whatsapp messages",
+  "require": {
+    "guzzlehttp/guzzle": "^7.5",
+    "segmentio/analytics-php": "^3.5",
+    "twilio/sdk": "^6.44",
+    "abraham/twitteroauth": "^4.0",
+    "ext-mysqli": "*",
+    "ext-openssl": "*",
+    "ext-pdo": "*"
+  },
+  "authors": [
+    {
+      "name": "Gundo Sifhufhi",
+      "email": "sifhufhisg@gmail.com",
+      "homepage": "https://gundo.ml",
+      "role": "Developer"
     }
+  ]
 }
