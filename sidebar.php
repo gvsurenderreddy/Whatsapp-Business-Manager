@@ -96,4 +96,15 @@
     </li>
 </ul>
 </div>
+</br>
+</br>
+</br>
+    <div class="border-bottom">
+        <h6 class="text-center">Some Other Apps</h6>
+        <li class="nav-pills nav-fill">
+            <a class="nav-link" target="_blank" href="https://openstores.azurewebsites.net/platform"><i class="fa-solid fa-cog"></i>
+                <span data-feather="file-text" class="align-text-bottom"></span>
+                OpenStores
+            </a>
+    </div>
 </nav>
